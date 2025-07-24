@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/api/auth/[...all]/route.ts"
-, "components/mode-toggle.jsx"  ],
+    "app/api/auth/[...all]/route.ts",
+    "components/mode-toggle.jsx"
+  ],
   "exclude": ["node_modules"]
 }
