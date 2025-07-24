@@ -52,7 +52,7 @@ export default function HeroSection() {
                   as="h1"
                   className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16"
                 >
-                  Build and Ship 10x faster with NS
+                  🔥 Satinder Note Notes. Code Better.
                 </TextEffect>
                 <TextEffect
                   per="line"
@@ -62,9 +62,9 @@ export default function HeroSection() {
                   as="p"
                   className="mt-8 max-w-2xl text-pretty text-lg"
                 >
-                  Tailwindcss highly customizable components for building modern
-                  websites and applications that look and feel the way you mean
-                  it.
+                  Supercharge your workflow with Satinder Note — the smartest
+                  way to capture, organize, and link dev notes, code snippets,
+                  and technical insights.
                 </TextEffect>
 
                 <AnimatedGroup
@@ -91,21 +91,10 @@ export default function HeroSection() {
                       className="rounded-xl px-5 text-base"
                     >
                       <Link href="#link">
-                        <span className="text-nowrap">Start Building</span>
+                        <span className="text-nowrap">Start Forging</span>
                       </Link>
                     </Button>
                   </div>
-                  <Button
-                    key={2}
-                    asChild
-                    size="lg"
-                    variant="ghost"
-                    className="h-10.5 rounded-xl px-5 text-base"
-                  >
-                    <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
-                    </Link>
-                  </Button>
                 </AnimatedGroup>
               </div>
             </div>
