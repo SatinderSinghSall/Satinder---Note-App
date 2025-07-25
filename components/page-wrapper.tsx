@@ -16,6 +16,7 @@ interface PageWrapperProps {
     label: string;
     href: string;
   }[];
+  title?: string;
 }
 
 export function PageWrapper({ children, breadcrumbs }: PageWrapperProps) {
