@@ -29,6 +29,7 @@ import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 
 const formSchema = z
   .object({
@@ -57,6 +58,14 @@ export function SignUpForm({
     },
   });
   const router = useRouter();
+
+  const signUp = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/dashboard",
+    });
+    toast.success("Redirecting to Google sign-in...");
+  };
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
@@ -183,6 +192,8 @@ export function SignUpForm({
                     variant="outline"
                     className="w-full"
                     disabled={loading}
+                    onClick={signUp}
+                    type="button"
                   >
                     Sign up with Google
                   </Button>
