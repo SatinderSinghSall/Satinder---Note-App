@@ -28,7 +28,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
-import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
 
 const formSchema = z
   .object({
@@ -56,6 +56,7 @@ export function SignUpForm({
       confirmPassword: "",
     },
   });
+  const router = useRouter();
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
@@ -67,7 +68,11 @@ export function SignUpForm({
         values.name
       );
       if (response.success) {
-        toast.success(response.message);
+        toast.success(
+          response.message ||
+            "Account created successfully! You can now log in."
+        );
+        router.push("/login");
       } else {
         toast.error(response.message);
       }
