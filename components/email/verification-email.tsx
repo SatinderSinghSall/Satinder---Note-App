@@ -103,7 +103,7 @@ const VerificationEmail = ({
             <Section className="bg-amber-50 border border-solid border-amber-200 rounded-[8px] p-[16px] mb-[32px]">
               <Text className="text-[14px] text-amber-800 leading-[20px] m-0">
                 <strong>Security Notice:</strong> This verification link will
-                expire in 24 hours. If you didn't create an account, please
+                expire in 24 hours. If you didn&apos;t create an account, please
                 ignore this email or contact our support team.
               </Text>
             </Section>
